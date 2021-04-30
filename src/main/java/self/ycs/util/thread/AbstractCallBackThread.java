@@ -16,8 +16,8 @@ public abstract class AbstractCallBackThread<T, R> {
     private static final boolean USE_COMMON_POOL = (ForkJoinPool.getCommonPoolParallelism() > 1);
     private final Executor asyncPool = USE_COMMON_POOL ? ForkJoinPool.commonPool() : new ThreadPerTaskExecutor();
 
-    public AbstractCallBackThread(int taskSize)  throws InterruptedException {
-        AbstractCallBackThread(null,taskSize,0,null);
+    public AbstractCallBackThread(int taskSize){
+        this.countDownLatch = new CountDownLatch(taskSize);
     }
 
     public AbstractCallBackThread(Executor executor, int taskSize, long timeOut, TimeUnit timeUnit) throws InterruptedException {

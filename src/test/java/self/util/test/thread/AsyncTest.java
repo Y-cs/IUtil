@@ -1,7 +1,11 @@
 package self.util.test.thread;
 
+import org.junit.Test;
 import self.ycs.util.thread.AbstractCallBackThread;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -10,8 +14,7 @@ import java.util.concurrent.CompletableFuture;
  */
 public class AsyncTest {
 
-    public static void main(String[] args) {
-        new AbstractCallBackThread()
-    }
+
+
 
 }
