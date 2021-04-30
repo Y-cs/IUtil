@@ -37,9 +37,8 @@ public class Btree<K, V> {
 
     public void putNode(Node node, Entity<K, V> entity) {
         int index = node.indexPut(entity);
-        if (index != 0 && index != node.entities.size() && node.entities.get(index).key.equals(entity.key)) {
+        if (index != node.entities.size() && node.entities.get(index).key.equals(entity.key)) {
             node.entities.get(index).value = entity.value;
-
         } else {
             if (node.isLeaf()) {
                 node.entities.add(index, entity);

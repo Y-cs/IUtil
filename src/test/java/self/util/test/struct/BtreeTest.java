@@ -18,7 +18,7 @@ public class BtreeTest {
     public void test1() {
         Btree<Integer, Integer> btree = new Btree<>(2, 2, Integer::compare);
 //        Random random = new Random();
-        int[] ints = {66, 59, 6, 32, 7, 45,32};
+        int[] ints = {66, 59, 6, 32, 7, 45,32,66,11,3,99,228,12,45,67,356,53};
         for (int i = 0; i < ints.length; i++) {
             btree.put(ints[i], i);
         }
